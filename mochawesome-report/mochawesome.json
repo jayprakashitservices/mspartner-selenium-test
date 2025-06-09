@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-09T07:25:40.261Z",
+    "end": "2025-06-09T07:25:46.752Z",
+    "duration": 6491,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70dd776a-00b7-48be-9d92-ae7637522819",
+      "title": "",
+      "fullFile": "D:\\Jayprakash Patel\\Automation Testing\\mspartner-selenium-test\\test\\signupTest.js",
+      "file": "\\test\\signupTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4342e919-3fa2-4c2b-bb16-9bc6feda6ca7",
+          "title": "MySquard Partner",
+          "fullFile": "D:\\Jayprakash Patel\\Automation Testing\\mspartner-selenium-test\\test\\signupTest.js",
+          "file": "\\test\\signupTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"MySquard Partner\"",
+              "fullTitle": "MySquard Partner \"before all\" hook in \"MySquard Partner\"",
+              "timedOut": false,
+              "duration": 1539,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const options = new chrome.Options();\noptions.addArguments('--headless', '--disable-gpu', '--no-sandbox');\ndriver = await new Builder()\n  .forBrowser('chrome')\n  .setChromeOptions(options)\n  .build();",
+              "err": {},
+              "uuid": "0d9ee868-b8e0-4448-b73e-86cc7a26c017",
+              "parentUUID": "4342e919-3fa2-4c2b-bb16-9bc6feda6ca7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"MySquard Partner\"",
+              "fullTitle": "MySquard Partner \"after all\" hook in \"MySquard Partner\"",
+              "timedOut": false,
+              "duration": 339,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "ca1a67c6-29ef-47c9-b908-2d23b30d7170",
+              "parentUUID": "4342e919-3fa2-4c2b-bb16-9bc6feda6ca7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Open MySqaurd partner web app and verify title",
+              "fullTitle": "MySquard Partner Open MySqaurd partner web app and verify title",
+              "timedOut": false,
+              "duration": 4600,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://p-dev.mysquard.com/');\n// const searchBox = await driver.findElement(By.name('q'));\n// await searchBox.sendKeys('OpenAI');\n// await searchBox.submit();\nawait driver.wait(until.titleContains('Partner :: MySquard'), 10000);\nconst title = await driver.getTitle();\nexpect(title).to.include('Partner :: MySquard');",
+              "err": {},
+              "uuid": "4b678ace-8c37-407e-8d3f-6ae7f5fa3790",
+              "parentUUID": "4342e919-3fa2-4c2b-bb16-9bc6feda6ca7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4b678ace-8c37-407e-8d3f-6ae7f5fa3790"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.5.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
