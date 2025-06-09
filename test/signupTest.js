@@ -49,7 +49,7 @@ describe('Signup Flow Test on ' + BASE_URL, function () {
     // 1. Email OTP
     const testEmail = 'user@example.com';
     await driver.findElement(By.id('exampleEmail')).sendKeys(testEmail);
-    await driver.findElement(By.name('Continue')).click();
+    await driver.findElement(By.xpath("//button[@class='sc-1f4d4914-23 shefB']")).click();
 
     await driver.wait(until.elementLocated(By.name('emailOtp')), 10000);
     const emailOtp = await fetchLatestOtp(EMAIL_OTP_COLLECTION, testEmail);
